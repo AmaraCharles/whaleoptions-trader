@@ -247,7 +247,7 @@ timestamp,hash}=req.body;
     res.status(404).json({
       success: false,
       status: 404,
-      message: "User nt found",
+      message: "User not found",
     });
 
     return;
