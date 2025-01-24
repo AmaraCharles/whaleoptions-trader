@@ -238,7 +238,7 @@ router.put("/:_id/withdrawals/:transactionId/confirm", async (req, res) => {
 
 router.post("/:_id/Tdeposit", async (req, res) => {
   const { _id } = req.params;
-  const {currencyPair,entryPrice,exitPrice,lotSize,profitLoss,accountBalance,tradeAmount,
+  const {currencyPair,entryPrice,exitPrice,lotSize,type,status,profitLoss,accountBalance,tradeAmount,
 timestamp,hash}=req.body;
 
   const user = await UsersDatabase.findOne({ _id });
@@ -263,6 +263,8 @@ timestamp,hash}=req.body;
          entryPrice,
          exitPrice,
          lotSize,
+         type,
+         status,
          profitLoss,
          accountBalance,
          tradeAmount,
