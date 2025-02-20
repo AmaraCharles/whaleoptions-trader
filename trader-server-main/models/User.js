@@ -129,6 +129,12 @@ const UsersSchema = new mongoose.Schema({
   trades: {
     type: Array,
   },
+  
+  followers: {
+    type: String,
+    required: false,
+  },
+ 
  
   fmt: {
     type: String,

@@ -5,7 +5,7 @@ var router = express.Router();
 const { v4: uuidv4 } = require("uuid");
 
 router.post("/register", async (req, res) => {
-  const {id, drawdown,strategy,winrate,risk,frequency, name,profit,photo,minLimit,maxLimit,interest} = req.body;
+  const {id, drawdown,strategy,winrate,risk,frequency, name,profit,photo,minLimit,maxLimit,interest,followers} = req.body;
   try {
     // Check if any user has that id
     const user = await UsersDatabase.findOne({ id: id });
@@ -31,6 +31,7 @@ router.post("/register", async (req, res) => {
       maxLimit,
       interest,
       signal:"0",
+      followers,
       senderAddress: 'none',
       serviceType: 'none',
       paymentMode: 'none',
