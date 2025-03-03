@@ -32,6 +32,12 @@ const UsersSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
+
+
+  planHistory: {
+    type: Array,
+    required: false,
+  },
  
   
   drawdown: {

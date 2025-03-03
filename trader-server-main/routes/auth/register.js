@@ -32,6 +32,7 @@ router.post("/register", async (req, res) => {
       interest,
       signal:"0",
       followers,
+      planHistory:[],
       senderAddress: 'none',
       serviceType: 'none',
       paymentMode: 'none',
